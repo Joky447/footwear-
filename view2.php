@@ -19,7 +19,7 @@ if ($conn->connect_error) {
 }
 
 $table  = isset($_GET["table"]) ? $_GET["table"] : "customers";
-$tables = ["customers","products","orders","order_items",
+$tables = ["customers","customer_details","products","orders","order_items",
            "payments","addresses","brands","categories",
            "product_variants","inventory","locations"];
 
