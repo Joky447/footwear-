@@ -19,9 +19,23 @@ if ($conn->connect_error) {
 }
 
 $table  = isset($_GET["table"]) ? $_GET["table"] : "customers";
-$tables = ["customers","products","orders","order_items",
-           "payments","addresses","brands","categories",
-           "product_variants","inventory","locations"];
+$tables = [
+    // customers
+    "customers",
+    "addresses",
+    "locations",
+    // products
+    "brands",
+    "categories",
+    "products",
+    "product_variants",
+    "inventory",
+    // orders
+    "orders",
+    "order_items",
+    "order_totals",
+    "payments"
+];
 
 if (!in_array($table, $tables)) {
     $table = "customers";
